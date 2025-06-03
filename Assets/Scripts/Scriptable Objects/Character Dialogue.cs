@@ -13,9 +13,15 @@ public class CharacterDialogue : ScriptableObject
     public List<Dialogue> DialogueSequence;
 
 
-    [HideInInspector] public Dictionary<int, Texture2D> CharacterArtDict;
+    [HideInInspector] public SerializableTextureDictionary CharacterArtDict;
     [HideInInspector] public SerializableStringDictionary Dialogues;
-    [HideInInspector] public Dictionary<int, AudioClip> VoiceLines;
+    [HideInInspector] public SerializableAudioClipDictionary VoiceLines;
+
+    [SerializeField] public DictionaryType DisplayDictByType;
+
+
+    public enum DictionaryType
+    { All, Texture, Text, AudioClip }
 
 }
 

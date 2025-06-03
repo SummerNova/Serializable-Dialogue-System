@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-[CreateAssetMenu(fileName = "SerializableStringDictionary", menuName = "Scriptable Objects/SerializableStringDictionary"), System.Serializable]
 public abstract class AbstractSerializableDictionary<TKey,TValue,TEntry> : ScriptableObject, ISerializationCallbackReceiver 
     where TEntry : AbstractEntry<TKey, TValue>, new()
 {
