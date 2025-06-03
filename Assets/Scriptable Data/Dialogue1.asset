@@ -16,10 +16,14 @@ MonoBehaviour:
   DialogueSequence:
   - TextureID: 0
     DialogueID: 0
+    VoiceLineID: 0
   - TextureID: 0
     DialogueID: 0
+    VoiceLineID: 0
   - TextureID: 0
     DialogueID: 0
+    VoiceLineID: 0
   - TextureID: 0
     DialogueID: 0
-  Dialogues: {fileID: 11400000, guid: 640bab21d287a544c9f5e405a509c107, type: 2}
+    VoiceLineID: 0
+  Dialogues: {fileID: 11400000, guid: 7c7a1e26d4a1b5445a6485c52267bc70, type: 2}
