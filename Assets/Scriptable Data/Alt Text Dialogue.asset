@@ -12,22 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ab36bdf9215234abf8ff9426bb3b20, type: 3}
   m_Name: Alt Text Dialogue
   m_EditorClassIdentifier: 
-  SavedData:
-  - Key: 0
-    Value: 0
-  - Key: 1
-    Value: 1
-  - Key: 2
-    Value: 2
-  - Key: 3
-    Value: 3
-  - Key: 4
-    Value: 4
-  - Key: 5
-    Value: 5
-  - Key: 6
-    Value: 6
-  - Key: 7
-    Value: 7
-  - Key: 8
-    Value: 8
+  _savedData:
+  - _key: 0
+    _value: 0
+  - _key: 1
+    _value: 1
+  - _key: 2
+    _value: 2
+  - _key: 3
+    _value: 3
+  - _key: 4
+    _value: 4
