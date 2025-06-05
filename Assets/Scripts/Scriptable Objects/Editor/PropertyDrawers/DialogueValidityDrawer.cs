@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 using static CharacterDialogue;
@@ -20,6 +21,8 @@ public class DialogueValidityDrawer : PropertyDrawer
         float width = fieldRow.width / 6;
         float space = fieldRow.width / 12;
         float xOffset = fieldRow.width /6;
+
+        Rect IndexRect = new Rect(position.x, position.y + lineHeight / 2 + spacing / 2, xOffset, lineHeight);
 
         // Get properties
         SerializedProperty textureID = property.FindPropertyRelative("TextureID");
@@ -46,6 +49,16 @@ public class DialogueValidityDrawer : PropertyDrawer
         {
             alignment = TextAnchor.MiddleCenter
         };
+
+        //string path = property.propertyPath;
+        //var match = Regex.Match(path, @"[(\d+)]");
+        //if (match.Success)
+        //{
+        //    int index = int.Parse(match.Groups[1].Value);
+        //    string labelText = $"Element {index}";
+        //    EditorGUI.LabelField(IndexRect, labelText);
+        //}
+
 
         // Draw centered labels
         EditorGUI.LabelField(textureLabelRect, "Texture ID", centeredLabel);
