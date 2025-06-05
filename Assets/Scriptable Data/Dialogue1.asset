@@ -26,4 +26,7 @@ MonoBehaviour:
   - TextureID: 0
     DialogueID: 0
     VoiceLineID: 0
+  CharacterArtDict: {fileID: 0}
   Dialogues: {fileID: 11400000, guid: 640bab21d287a544c9f5e405a509c107, type: 2}
+  VoiceLines: {fileID: 0}
+  DisplayDictByType: 0
