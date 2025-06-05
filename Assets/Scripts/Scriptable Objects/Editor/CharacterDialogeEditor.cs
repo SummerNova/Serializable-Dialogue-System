@@ -84,7 +84,12 @@ public class CharacterDialogueEditor : Editor
                         _targetRef.CharacterArtDict.Data[newKey] = oldValue;
                         allKeys[i] = newKey;
                     }
-                    else newKey = oldKey;
+                    else
+                    {
+                        if(newKey != oldKey) Debug.LogWarning("Cannot assign this key,it already exists!");
+
+                        newKey = oldKey;
+                    } 
                 }
 
                 bool stopper = false;
@@ -159,7 +164,12 @@ public class CharacterDialogueEditor : Editor
                         _targetRef.VoiceLines.Data[newKey] = oldValue;
                         allKeys[i] = newKey;
                     }
-                    else newKey = oldKey;
+                    else
+                    {
+                        if (newKey != oldKey) Debug.LogWarning("Cannot assign this key,it already exists!");
+                        newKey = oldKey;
+                    }
+                    
                 }
 
                 EditorGUI.BeginChangeCheck();
@@ -221,7 +231,11 @@ public class CharacterDialogueEditor : Editor
                         _targetRef.Dialogues.Data[newKey] = oldValue;
                         allKeys[i] = newKey;
                     }
-                    else newKey = oldKey;
+                    else
+                    {
+                        if (newKey != oldKey) Debug.LogWarning("Cannot assign this key,it already exists!");
+                        newKey = oldKey;
+                    }
                 }
 
                 EditorGUI.BeginChangeCheck();

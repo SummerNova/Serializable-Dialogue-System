@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterName: My Guy
   DialogueSequence:
-  - TextureID: 555
+  - TextureID: 1
     DialogueID: 0
     VoiceLineID: 0
   - TextureID: 0
@@ -29,4 +29,4 @@ MonoBehaviour:
   CharacterArtDict: {fileID: 11400000, guid: 8373da5dbaf0e554eba5c927d4306a52, type: 2}
   Dialogues: {fileID: 11400000, guid: 640bab21d287a544c9f5e405a509c107, type: 2}
   VoiceLines: {fileID: 11400000, guid: e5a750cb4c7a3df48adbba5d7ec1ed13, type: 2}
-  DisplayDictByType: 1
+  DisplayDictByType: 2
