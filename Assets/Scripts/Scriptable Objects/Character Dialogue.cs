@@ -21,7 +21,7 @@ public class CharacterDialogue : ScriptableObject
 
 
     public enum DictionaryType
-    { All, Texture, Text, AudioClip }
+    { All, Texture, Text, AudioClip, None }
 
     public bool IsValidTextID(int key)
     {

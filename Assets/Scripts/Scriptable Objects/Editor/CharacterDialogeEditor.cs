@@ -36,7 +36,7 @@ public class CharacterDialogueEditor : Editor
             case CharacterDialogue.DictionaryType.AudioClip:
                 DisplayAudioDictionary();
                 break;
-            default:
+            case CharacterDialogue.DictionaryType.All:
                 DisplayTextDictionary();
                 DisplayAudioDictionary();
                 DisplayTextureDictionary();

@@ -25,7 +25,7 @@ public class DialogueStructDrawer : PropertyDrawer
         Rect IndexRect = new Rect(position.x, position.y + lineHeight / 2 + spacing / 2, xOffset, lineHeight);
 
         EditorGUI.PrefixLabel(IndexRect, label);
-
+        if (label.text.Length == 0) xOffset = 0;
         
         SerializedProperty textureID = property.FindPropertyRelative("TextureID");
         SerializedProperty dialogueID = property.FindPropertyRelative("DialogueID");
