@@ -13,9 +13,9 @@ public class CharacterDialogue : ScriptableObject
     public List<Dialogue> DialogueSequence;
 
 
-    [HideInInspector] public SerializableTextureDictionary CharacterArtDict;
-    [HideInInspector] public SerializableStringDictionary Dialogues;
-    [HideInInspector] public SerializableAudioClipDictionary VoiceLines;
+    public SerializableTextureDictionary CharacterArtDict;
+    public SerializableStringDictionary Dialogues;
+    public SerializableAudioClipDictionary VoiceLines;
 
     [SerializeField] public DictionaryType DisplayDictByType;
 
