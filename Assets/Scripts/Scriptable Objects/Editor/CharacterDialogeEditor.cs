@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
+using System;
+using UnityEngine.UIElements;
 
 [CustomEditor(typeof(CharacterDialogue))]
 public class CharacterDialogueEditor : Editor
@@ -9,8 +11,6 @@ public class CharacterDialogueEditor : Editor
     public SerializedProperty DialogueAudioData;
     public SerializedProperty DialogeTexture2DData;
     private CharacterDialogue _targetRef;
-    private int latest = 0;
-
     private void OnEnable()
     {
         _targetRef = (CharacterDialogue)target;
@@ -50,7 +50,6 @@ public class CharacterDialogueEditor : Editor
         {
             EditorUtility.SetDirty(_targetRef);
             AssetDatabase.SaveAssets();
-            //Debug.Log(_targetRef.Dialogues[latest]);
         }
 
         serializedObject.ApplyModifiedProperties();
@@ -74,7 +73,9 @@ public class CharacterDialogueEditor : Editor
                 EditorGUILayout.BeginHorizontal();
                 EditorGUILayout.BeginVertical();
                 EditorGUI.BeginChangeCheck();
+              
                 int newKey = EditorGUILayout.IntField(oldKey, GUILayout.Width(30));
+
                 if (EditorGUI.EndChangeCheck())
                 {
                     if (newKey != oldKey && !_targetRef.CharacterArtDict.Data.ContainsKey(newKey))
@@ -127,7 +128,6 @@ public class CharacterDialogueEditor : Editor
                 }
 
                 _targetRef.CharacterArtDict.Data[defaultKey] = null;
-                latest = defaultKey;
             }
         }
     }
@@ -191,7 +191,6 @@ public class CharacterDialogueEditor : Editor
                 }
 
                 _targetRef.VoiceLines.Data[defaultKey] = null;
-                latest = defaultKey;
             }
         }
     }
@@ -255,7 +254,6 @@ public class CharacterDialogueEditor : Editor
                 }
 
                 _targetRef.Dialogues.Data[defaultKey + suffix] = $"{defaultKey}";
-                latest = defaultKey + suffix;
             }
         }
     }

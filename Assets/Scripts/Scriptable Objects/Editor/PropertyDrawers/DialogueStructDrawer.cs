@@ -4,7 +4,7 @@ using UnityEngine;
 using static CharacterDialogue;
 
 [CustomPropertyDrawer(typeof(Dialogue))]
-public class DialogueValidityDrawer : PropertyDrawer
+public class DialogueStructDrawer : PropertyDrawer
 {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {

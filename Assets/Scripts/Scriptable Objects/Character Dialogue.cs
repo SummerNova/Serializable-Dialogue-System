@@ -23,6 +23,31 @@ public class CharacterDialogue : ScriptableObject
     public enum DictionaryType
     { All, Texture, Text, AudioClip }
 
+    public bool IsValidTextID(int key)
+    {
+        if (Dialogues.Data.ContainsKey(key)) return true;
+        else return false;
+    }
+    public bool IsValidTextureID(int key)
+    {
+        if (CharacterArtDict.Data.ContainsKey(key)) return true;
+        else return false;
+    }
+    public bool IsValidAudioID(int key)
+    {
+        if (VoiceLines.Data.ContainsKey(key)) return true;
+        else return false;
+    }
+
+    private void OnValidate()
+    {
+        for (int i = 0; i < DialogueSequence.Count; i++)
+        {
+            if (!IsValidTextureID(DialogueSequence[i].TextureID)) Debug.LogWarning($"Texture ID at element {i} invalid");
+            if (!IsValidTextID(DialogueSequence[i].DialogueID)) Debug.LogWarning($"Text ID at element {i} invalid");
+            if (!IsValidAudioID(DialogueSequence[i].VoiceLineID)) Debug.LogWarning($"Audio ID at element {i} invalid");
+        }
+    }
 }
 
 

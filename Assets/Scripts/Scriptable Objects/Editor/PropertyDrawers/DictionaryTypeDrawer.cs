@@ -3,7 +3,7 @@ using UnityEngine;
 using static CharacterDialogue;
 
 [CustomPropertyDrawer(typeof(DictionaryType))]
-public class DictionaryDrawer:PropertyDrawer
+public class DictionaryTypeDrawer:PropertyDrawer
 {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
