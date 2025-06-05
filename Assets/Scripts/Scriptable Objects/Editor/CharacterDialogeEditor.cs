@@ -25,9 +25,26 @@ public class CharacterDialogueEditor : Editor
         serializedObject.Update();
         serializedObject.ApplyModifiedProperties();
 
-        DisplayTextDictionary();
-        DisplayAudioDictionary();
-        DisplayTextureDictionary();
+        switch (_targetRef.DisplayDictByType)
+        {
+            case CharacterDialogue.DictionaryType.Texture:
+                DisplayTextureDictionary();
+                break;
+            case CharacterDialogue.DictionaryType.Text:
+                DisplayTextDictionary();
+                break;
+            case CharacterDialogue.DictionaryType.AudioClip:
+                DisplayAudioDictionary();
+                break;
+            default:
+                DisplayTextDictionary();
+                DisplayAudioDictionary();
+                DisplayTextureDictionary();
+                break;
+
+        }
+
+        
 
         if (GUI.changed)
         {
