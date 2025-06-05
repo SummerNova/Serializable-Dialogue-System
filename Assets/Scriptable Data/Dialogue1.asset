@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterName: My Guy
   DialogueSequence:
-  - TextureID: 0
+  - TextureID: 1
     DialogueID: 0
     VoiceLineID: 0
   - TextureID: 0
