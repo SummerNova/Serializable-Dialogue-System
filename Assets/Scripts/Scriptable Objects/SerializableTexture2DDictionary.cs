@@ -9,6 +9,18 @@ public class SerializableTextureDictionary : AbstractSerializableDictionary<int,
 
     protected override List<intTexture2DEntry> GetSavedData() => _savedData;
     protected override void SetSavedData(List<intTexture2DEntry> list) => _savedData = list;
+
+    public override bool IsValid(){
+        foreach(intTexture2DEntry entry in _savedData)
+        {
+            if(entry.Value == null)
+            {
+                Debug.LogWarning($"Texture with key {entry.Key} is null in {this.name}");
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 

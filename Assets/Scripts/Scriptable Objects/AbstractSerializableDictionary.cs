@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public abstract class AbstractSerializableDictionary<TKey,TValue,TEntry> : ScriptableObject, ISerializationCallbackReceiver 
+public abstract class AbstractSerializableDictionary<TKey,TValue,TEntry> : ScriptableObject, ISerializationCallbackReceiver, IValidateable
     where TEntry : AbstractEntry<TKey, TValue>, new()
 {
     protected List<TEntry> SavedData
@@ -53,6 +53,11 @@ public abstract class AbstractSerializableDictionary<TKey,TValue,TEntry> : Scrip
                 SavedData.Add(newAbstractEntry);
             }
         }
+    }
+
+    public virtual bool IsValid()
+    {
+        return true;
     }
 }
 
