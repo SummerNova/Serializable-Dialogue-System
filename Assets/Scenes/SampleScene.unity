@@ -406,9 +406,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12fe18b0c3310034f909fa16879c2745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterName: My Girl
+  CharacterName: My Guy
   FoundDialogues:
-  - {fileID: 11400000, guid: 52cb5a4ef89beaa40b8c88411b2b1118, type: 2}
+  - {fileID: 11400000, guid: d25682d7434107a49bc70bfb664ac265, type: 2}
+  - {fileID: 11400000, guid: 2d4e8cd4a8630a9459596ffb9df74fb7, type: 2}
 --- !u!4 &831285251
 Transform:
   m_ObjectHideFlags: 0
