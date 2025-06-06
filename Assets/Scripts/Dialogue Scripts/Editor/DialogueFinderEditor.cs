@@ -60,7 +60,7 @@ public class DialogueFinderEditor : Editor
             string path = AssetDatabase.GUIDToAssetPath(guid);
             ScriptableObject so = AssetDatabase.LoadAssetAtPath<ScriptableObject>(path);
 
-            if (so is CharacterDialogue Dialogue && Dialogue.CharacterName.Contains(Name))
+            if (so is CharacterDialogue Dialogue && Dialogue.CharacterName.ToLower().Contains(Name.ToLower()))
             {
                 output.Add(Dialogue);
             }
