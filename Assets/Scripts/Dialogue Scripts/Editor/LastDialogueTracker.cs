@@ -37,7 +37,7 @@ public static class LastSelectionTracker
         }
     }
 
-    [MenuItem("Tools/Jump to Last Selected Dialogue %#Y")]
+    [MenuItem("Tools/Dialogues/Jump to Last Selected Dialogue %#Y")]
     static void JumpToLastSelected()
     {
         if (LastSelected != null)
