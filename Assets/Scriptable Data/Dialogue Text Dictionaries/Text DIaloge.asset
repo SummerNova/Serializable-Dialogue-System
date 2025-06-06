@@ -15,3 +15,5 @@ MonoBehaviour:
   _savedData:
   - _key: 0
     _value: Fuck
+  - _key: 1
+    _value: 1

@@ -40,7 +40,10 @@ public class SrializableStringDictionaryEditor: Editor
                     _targetEditedScriptRef.Data[newKey] = oldValue;
                     allKeys[i] = newKey;
                 }
-                else newKey = oldKey;
+                {
+                    if (newKey != oldKey) Debug.LogWarning("Cannot assign this key,it already exists!");
+                    else newKey = oldKey;
+                }
             }
 
             EditorGUI.BeginChangeCheck();

@@ -41,7 +41,11 @@ public class SrializableTextureDictionaryEditor : Editor
                     _targetEditedScriptRef.Data[newKey] = texture;
                     allKeys[i] = newKey;
                 }
-                else newKey = oldKey;
+                else
+                {
+                    if (newKey != oldKey) Debug.LogWarning("Cannot assign this key,it already exists!");
+                     newKey = oldKey;
+                }
             }
 
             bool stopper = false;

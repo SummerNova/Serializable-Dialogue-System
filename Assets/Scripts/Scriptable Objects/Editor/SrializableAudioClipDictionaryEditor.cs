@@ -40,7 +40,11 @@ public class SrializableAudioClipDictionaryEditor: Editor
                     _targetEditedScriptRef.Data[newKey] = oldValue;
                     allKeys[i] = newKey;
                 }
-                else newKey = oldKey;
+                else
+                {
+                    if (newKey != oldKey) Debug.LogWarning("Cannot assign this key,it already exists!");
+                    newKey = oldKey;
+                } 
             }
 
             EditorGUI.BeginChangeCheck();
