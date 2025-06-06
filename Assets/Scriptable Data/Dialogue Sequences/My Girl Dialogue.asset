@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0dc9ca40f54b51b4a902c575b6eddfda, type: 3}
-  m_Name: Dialogue1
+  m_Name: My Girl Dialogue
   m_EditorClassIdentifier: 
-  CharacterName: My Guy
+  CharacterName: My Girl
   DialogueSequence:
   - TextureID: 1
     DialogueID: 0
